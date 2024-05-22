@@ -8,7 +8,7 @@
   <body>
     <!-- component -->
     <div
-      class="grid items-center justify-center min-h-screen from-cyan-100 via-pink-200 to-yellow-200 bg-gradient-to-br"
+      class="flex flex-col gap-11 items-center justify-center min-h-screen from-cyan-100 via-pink-200 to-yellow-200 bg-gradient-to-br"
     >
       <div
         class="flex items-center mt-10 max-w-md mx-auto bg-white rounded-lg"
@@ -87,14 +87,19 @@
           </div>
         </div>
       </div>
-      <div id="loader" class="mx-auto h-full">
-        <div class="relative">
-          <div
-            class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"
-          ></div>
-          <div
-            class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin"
-          ></div>
+      <div
+        id="loader"
+        class="p-6 rounded-3xl w-[450px] text-white bg-[#171822]"
+      >
+        <div class="flex space-x-4 py-6">
+          <div class="rounded-full bg-gray-300 h-12 w-12"></div>
+          <div class="flex-1 space-y-4 py-1">
+            <div class="h-4 bg-gray-300 rounded w-3/4"></div>
+            <div class="space-y-2">
+              <div class="h-4 bg-gray-300 rounded"></div>
+              <div class="h-4 bg-gray-300 rounded w-5/6"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
