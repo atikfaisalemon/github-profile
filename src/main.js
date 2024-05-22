@@ -1,8 +1,12 @@
 import "./style/index.css";
+let infoloader = document.getElementById("loader");
+document.getElementById("loader").style.display = "none";
 
 const btn1 = document.getElementById("btn");
 
 function getUserInformationFetch() {
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("info").style.display = "none";
   const inputText = document.getElementById("gitusername");
   const gitUserName = inputText.value;
   const requstUrl = `https://api.github.com/users/${gitUserName}`;
@@ -27,6 +31,8 @@ function getUserInformationFetch() {
       document.getElementById("name").innerHTML = userName;
       document.getElementById("bio").innerHTML = userBio;
       document.getElementById("company").innerHTML = userCompany;
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("info").style.display = "block";
     }
   };
   xhr.send();
