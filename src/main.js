@@ -38,3 +38,4 @@ inputValue.addEventListener("keyup", function (event) {
     getUserInformationFetch();
   }
 });
+btn1.addEventListener("click", getUserInformationFetch);
