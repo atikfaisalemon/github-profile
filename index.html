@@ -14,6 +14,7 @@
         class="flex items-center mt-10 max-w-md mx-auto bg-white rounded-lg"
         x-data="{ search: '' }"
       >
+        <!-- input searchbox -->
         <div class="w-full">
           <input
             id="gitusername"
@@ -26,6 +27,7 @@
             x-model="search"
           />
         </div>
+        <!-- button -->
         <div>
           <button
             id="btn"
@@ -51,6 +53,8 @@
           </button>
         </div>
       </div>
+
+      <!-- github information -->
       <div id="info" class="grid place-items-center">
         <div class="p-6 rounded-3xl w-[450px] text-white bg-[#171822]">
           <div class="flex justify-between items-center">
@@ -87,20 +91,57 @@
           </div>
         </div>
       </div>
-      <div
-        id="loader"
-        class="p-6 rounded-3xl w-[450px] text-white bg-[#171822]"
-      >
-        <div class="flex space-x-4 py-6">
-          <div class="rounded-full bg-gray-300 h-12 w-12"></div>
-          <div class="flex-1 space-y-4 py-1">
-            <div class="h-4 bg-gray-300 rounded w-3/4"></div>
+      <!-- Loading Component -->
+      <div id="loader" class="grid place-items-center animate-pulse">
+        <div class="p-6 rounded-3xl w-[450px] text-white bg-[#171822]">
+          <div class="flex justify-between items-center">
+            <div class="h-20 w-20 rounded-full bg-gray-700"></div>
+            <div class="grid">
+              <div class="font-thin text-lg">Repo</div>
+              <div id="repo" class="h-6 w-[80%] bg-gray-700 rounded-md"></div>
+            </div>
+
+            <div class="grid">
+              <div class="font-thin text-lg">followers</div>
+              <div id="repo" class="h-6 w-[80%] bg-gray-700 rounded-md"></div>
+            </div>
+
+            <div class="grid">
+              <div class="font-thin text-lg">Following</div>
+              <div id="repo" class="h-6 w-[80%] bg-gray-700 rounded-md"></div>
+            </div>
+          </div>
+          <div class="pt-5 space-y-2">
+            <div
+              id="name"
+              class="font-semibold h-5 w-[40%] bg-gray-700 rounded-md"
+            ></div>
+            <div
+              id="company"
+              class="font-thin text-sm h-4 w-[20%] bg-gray-700 rounded-md"
+            ></div>
+          </div>
+          <div class="pt-5">
+            <div class="font-semibold">Bio</div>
             <div class="space-y-2">
-              <div class="h-4 bg-gray-300 rounded"></div>
-              <div class="h-4 bg-gray-300 rounded w-5/6"></div>
+              <div
+                id="bio"
+                class="font-thin text-sm h-4 w-full bg-gray-700 rounded-md"
+              ></div>
+              <div
+                id="bio"
+                class="font-thin text-sm h-4 w-[60%] bg-gray-700 rounded-md"
+              ></div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        id="nouserfound"
+        class="p-6 rounded-3xl w-[450px] text-white bg-[#171822]"
+      >
+        <p class="text-2xl">No user found. Please enter a valid username.</p>
       </div>
     </div>
 
